@@ -1,0 +1,9 @@
+<div class="container">
+<br><br>
+<button *ngIf="!strip_status" (click)="click_stripe()">Click Stripe</button>
+<button *ngIf="!paypal_status" (click)="click_paypal()">Click Paypal</button>
+<app-stripe *ngIf="strip_status"></app-stripe>
+<br><br>
+<app-paypal *ngIf="paypal_status"></app-paypal>
+<router-outlet></router-outlet>
+</div>
